@@ -1,10 +1,5 @@
 pipeline {
-	agent {
-		docker {
-			image 'gradle:8.10.2-jdk17'   // ARM 지원
-			args '-v $HOME/.gradle:/home/gradle/.gradle'
-		}
-	}
+ agent any
  stages {
  stage("Compile") {
  steps {
